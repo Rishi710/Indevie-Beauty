@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Cormorant_Garamond } from "next/font/google";
 import "../styles/globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -28,16 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${poppins.variable} ${cormorantGaramond.variable} antialiased font-sans`}
-        suppressHydrationWarning
       >
-        <Header />
+     
         <main>
           {children}
         </main>
-        <Footer />
+
       </body>
     </html>
   );
